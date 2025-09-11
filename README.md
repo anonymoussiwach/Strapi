@@ -40,7 +40,7 @@ These steps are not executed here due to time constraints, but the written code 
 
 	1.	Clone repo
 
-git clone https://github.com/<your-username>/strapi-terraform-aws.git
+git clone https://github.com/anonymoussiwach/Strapi.git
 cd strapi-terraform-aws
 
 
