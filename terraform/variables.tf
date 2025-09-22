@@ -1,6 +1,11 @@
 variable "aws_region" {
-  description = "AWS region to deploy Strapi"
+  description = "AWS region to deploy resources"
   default     = "ap-south-1"
+}
+
+variable "ami_id" {
+  description = "AMI ID for EC2 instance"
+  default     = "ami-0533167fcff018a86"  # Amazon Linux 2023 x86_64 HVM kernel-6.12
 }
 
 variable "instance_type" {
@@ -9,16 +14,11 @@ variable "instance_type" {
 }
 
 variable "key_pair" {
-  description = "Name of AWS EC2 key pair for SSH"
+  description = "EC2 Key Pair name for SSH"
   type        = string
 }
 
 variable "docker_image" {
-  description = "Docker image URI to deploy Strapi"
-  default     = "strapi-app"  # your ECR image
-}
-
-variable "ami_id" {
-  description = "AMI ID for EC2 instance"
-  default     = "ami-0c02fb55956c7d316"  # Amazon Linux 2
+  description = "Docker image to deploy on EC2"
+  type        = string
 }
