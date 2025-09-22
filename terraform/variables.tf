@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "ami_id" {
   description = "AMI ID for EC2 instance"
-  default     = "ami-0533167fcff018a86"  # Amazon Linux 2023 x86_64 HVM kernel-6.12
+  default     = "ami-0533167fcff018a86"  # Amazon Linux 2023
 }
 
 variable "instance_type" {
@@ -21,4 +21,5 @@ variable "key_pair" {
 variable "docker_image" {
   description = "Docker image to deploy on EC2"
   type        = string
+  default     = "145065858967.dkr.ecr.ap-south-1.amazonaws.com/strapi-app:latest"
 }
